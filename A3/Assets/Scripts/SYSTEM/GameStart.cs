@@ -14,7 +14,7 @@ public class GameStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.spawnPlayerOnce(new Vector3(0, 0, -60));
+        GameManager.Instance.spawnPlayerOnce(new Vector3(0, 0, -150));
         myConditionScripts.GetComponent<LevelCondition>().enabled = true;
     }
 

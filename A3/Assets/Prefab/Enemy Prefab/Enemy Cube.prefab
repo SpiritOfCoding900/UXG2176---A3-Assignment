@@ -430,10 +430,11 @@ MonoBehaviour:
     m_Bits: 1024
   sawPlayer: 0
   attackPlayer: 0
-  sightRadius: 20
-  attackRadius: 10
+  sightRadius: 60
+  attackRadius: 55
   sightRadiusCircle: 0
   attackRadiusCircle: 0
+  walkSpeed: 10
   Bullet: {fileID: 5912129004433397390, guid: fb197958ed8e2cf4e89ff9f8ad8af6ac, type: 3}
 --- !u!1 &488119511912841294
 GameObject:

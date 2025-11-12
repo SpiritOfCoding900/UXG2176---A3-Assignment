@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour, IDamagable
     public bool sawPlayer, attackPlayer;
     public float sightRadius, attackRadius;
     public float sightRadiusCircle, attackRadiusCircle;
-
+    public float walkSpeed = 10f;
     // Bullet Heaven.
     public GameObject Bullet;
     float timer_ = 0;
@@ -179,12 +179,11 @@ public class Enemy : MonoBehaviour, IDamagable
         {
             if (Player01 != null)
             {
+                gameObject.GetComponent<NavMeshAgent>().speed = walkSpeed;
                 agent.SetDestination(Player01.transform.position);
-
-                gameObject.GetComponent<NavMeshAgent>().speed = 3.5f;
-
                 Vector3 relativePos = Player01.transform.position - transform.position;
                 relativePos.y = 0;
+
                 // the second argument, upwards, defaults to Vector3.up
                 Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
                 transform.rotation = rotation;
