@@ -468,7 +468,7 @@ MonoBehaviour:
   Agent: {fileID: 0}
   Health: 0
   Gun: {fileID: 0}
-  moveSpeed: 10
+  moveSpeed: 50
   moveDirection: {x: 0, y: 0, z: 0}
   _rb: {fileID: 2964096722065918059}
   playerLimit:

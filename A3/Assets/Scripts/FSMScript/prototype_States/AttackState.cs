@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AttackState : IPrototypeState
 {
-    const float _attackDuration = 0.25f;
+    const float _attackDuration = 0.05f;
     float _currentAttackDuration;
 
     public AttackState(FSMProtoType machine) : base(machine)
