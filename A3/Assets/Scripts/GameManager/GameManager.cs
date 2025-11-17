@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : SimpleSingleton<GameManager>
 {
@@ -47,6 +48,14 @@ public class GameManager : SimpleSingleton<GameManager>
         // Ensure only one instance of GameManager exists
         base.Awake(); // only if SimpleSingleton has its own Awake()
 
+        // Detect gun when this scene loads
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        FindingTheGun();
+    }
+
+    public void FindingTheGun()
+    {
         // Find the main camera
         Camera mainCam = Camera.main;
 
@@ -58,7 +67,6 @@ public class GameManager : SimpleSingleton<GameManager>
             {
                 Gun01 = gun;
                 putGunOnPlayer(gun); // optional if you want to do something extra here
-
                 Debug.Log("[GameManager] RayCastGun registered from Main Camera.");
             }
             else
@@ -72,6 +80,12 @@ public class GameManager : SimpleSingleton<GameManager>
         }
     }
 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("[GameManager] Scene loaded: " + scene.name);
+        FindingTheGun();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,9 +95,9 @@ public class GameManager : SimpleSingleton<GameManager>
         //AudioManager.Instance.PlaySound(SoundID.BGMusic);
     }
 
-    void FixedUpdate()
+    void OnDestroy()
     {
-        
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public void spawnPlayerOnce(Vector3 PlayersNewSpawnPosition)
@@ -101,7 +115,6 @@ public class GameManager : SimpleSingleton<GameManager>
     public void putGunOnPlayer(RayCastGun getGun)
     {
         CurrentGun = getGun;
-        // Example: link gun to player’s weapon handler
         if (CurrentPlayer != null)
         {
             Debug.Log("[GameManager] Gun equipped on player.");

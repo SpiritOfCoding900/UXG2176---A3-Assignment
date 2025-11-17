@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3BF17959-A253-1C97-CCC4-7A17FC17C98F}</ProjectGuid>
+    <ProjectGuid>{B5175058-BA92-B468-D9AF-DC6DF18D0E7C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.AI.Navigation.Editor</AssemblyName>
@@ -1111,19 +1111,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.AI.Navigation.csproj">
-      <Project>{B487390C-F62D-F777-7658-ADAFAB7EBC7F}</Project>
+      <Project>{C4E1182E-4083-0582-CF47-C4733BAED184}</Project>
       <Name>Unity.AI.Navigation</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
-      <Project>{DC6E0565-58CD-F23C-1E97-B7D4CAA1E211}</Project>
+      <Project>{E4406B4D-5890-143D-62FA-D5A5041A9022}</Project>
       <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{0A268D04-5DBF-FE41-B576-472C650D8EFF}</Project>
+      <Project>{0157DC18-8B9C-0EEB-0573-FF780A8305BB}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{C31D6CC2-7AB6-B0C2-2B72-1D2D28700E7F}</Project>
+      <Project>{85004F3F-A7C2-4DA9-E341-B7D203EF87E9}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
